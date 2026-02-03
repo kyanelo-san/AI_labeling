@@ -1,0 +1,35 @@
+# フォルダごと完全に除外
+venv/
+.venv/
+bin/
+obj/
+lib/
+node_modules/
+
+labels/
+*.txt
+
+runs/
+# データセット系（フォルダ名が dataset ならそれ自体を除外）
+dataset/
+data/
+images/
+photos/
+
+# 拡張子で除外
+*.jpg
+*.jpeg
+*.png
+*.gif
+*.bmp
+*.mp4
+*.zip
+*.7z
+*.rar
+*.exe
+*.dll
+*.pth
+*.h5
+*.onnx
+
+credentials.json

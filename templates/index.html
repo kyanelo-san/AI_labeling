@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>自販機 統合モニター</title>
+    <meta http-equiv="refresh" content="60">
+    <style>
+        body { font-family: sans-serif; text-align: center; background-color: #f0f0f0; margin: 0; padding: 20px; }
+        h1 { margin-bottom: 20px; }
+        
+        /* レイアウト用コンテナ */
+        .dashboard {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        /* 個別のパネル */
+        .panel {
+            background: white;
+            padding: 15px;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            width: 45%; /* 画面の約半分ずつ使う */
+            min-width: 400px;
+        }
+
+        img, iframe {
+            width: 100%;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+
+        /* iframeの高さ調整 */
+        iframe {
+            height: 650px; /* 必要に応じて調整してください */
+        }
+
+        .status { font-size: 0.9em; color: #555; margin-bottom: 10px; }
+    </style>
+</head>
+<body>
+    <h1>自販機モニタリングシステム</h1>
+    
+    <div class="dashboard">
+        <div class="panel">
+            <h2>AI解析結果 (10分更新)</h2>
+            <p class="status">最終更新: <span id="time"></span></p>
+            <img src="/static/current.jpg" id="driveImage" alt="解析画像待機中...">
+        </div>
+
+        <div class="panel">
+            <h2>リアルタイム映像</h2>
+            <p class="status">Live Camera (192.168.11.51)</p>
+            <iframe src="http://192.168.11.51:5000" title="Realtime Camera"></iframe>
+        </div>
+    </div>
+
+    <script>
+        // 時刻表示
+        document.getElementById('time').innerText = new Date().toLocaleString();
+        
+        // 画像キャッシュ対策（?v=時間を付与）
+        const img = document.getElementById('driveImage');
+        img.src = "/static/current.jpg?v=" + new Date().getTime();
+    </script>
+</body>
+</html>

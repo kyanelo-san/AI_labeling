@@ -1,0 +1,7 @@
+train: ../dataset/images/train/
+val: ../dataset/images/val/
+
+# クラス名のリスト
+names:
+  0: empty
+  1: full
