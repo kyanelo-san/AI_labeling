@@ -12,7 +12,7 @@ from google.oauth2 import service_account
 from googleapiclient.discovery import build
 from googleapiclient.http import MediaIoBaseDownload
 
-app = Flask(__name__)
+app = Flask(__name__) 
 
 # ===========================
 # 【重要】設定項目：ここを書き換えてください
