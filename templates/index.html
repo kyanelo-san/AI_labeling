@@ -48,7 +48,7 @@
         <div class="panel">
             <h2>AI解析結果 (10分更新)</h2>
             <p class="status">最終更新: <span id="time"></span></p>
-            <img src="/static/current.jpg" id="driveImage" alt="解析画像待機中...">
+            <img src="/static/analysis.jpg" id="driveImage" alt="解析画像待機中...">
         </div>
 
         <div class="panel">
@@ -64,7 +64,7 @@
         
         // 画像キャッシュ対策（?v=時間を付与）
         const img = document.getElementById('driveImage');
-        img.src = "/static/current.jpg?v=" + new Date().getTime();
+        img.src = "/static/analysis.jpg?v=" + new Date().getTime();
     </script>
 </body>
 </html>

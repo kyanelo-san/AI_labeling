@@ -5,6 +5,7 @@ bin/
 obj/
 lib/
 node_modules/
+/venv
 
 labels/
 *.txt
@@ -31,5 +32,8 @@ photos/
 *.pth
 *.h5
 *.onnx
+*.json
+*.pt
 
 credentials.json
+service_account.json
