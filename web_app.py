@@ -14,9 +14,7 @@ from googleapiclient.http import MediaIoBaseDownload
 
 app = Flask(__name__) 
 
-# ===========================
-# 【重要】設定項目：ここを書き換えてください
-# ===========================
+
 # 1. YOLOモデルのパス
 MODEL_PATH = 'D:/dataset/runs/detect/train30/weights/best.pt'
 # 2. ダウンロードしたサービスアカウントキーのファイル名
@@ -25,7 +23,6 @@ SERVICE_ACCOUNT_FILE = 'service_account.json'
 DRIVE_FOLDER_ID = '1P0kb5GhoYKZKv0x8BOhFnOISLwFO-D2c'
 # 4. Driveのスコープ（変更不要）
 SCOPES = ['https://www.googleapis.com/auth/drive.readonly']
-# ===========================
 
 
 # モデルの読み込み
