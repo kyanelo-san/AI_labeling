@@ -6,8 +6,8 @@ obj/
 lib/
 node_modules/
 /venv
-/noGithub
-noGithub/
+/notGithub
+notGithub/
 
 labels/
 *.txt
@@ -18,7 +18,7 @@ dataset/
 data/
 images/
 photos/
-noGithub/
+
 
 # 拡張子で除外
 *.jpg
