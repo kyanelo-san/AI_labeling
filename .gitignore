@@ -18,6 +18,7 @@ dataset/
 data/
 images/
 photos/
+noGithub/
 
 # 拡張子で除外
 *.jpg
