@@ -6,6 +6,8 @@ obj/
 lib/
 node_modules/
 /venv
+/noGithub
+noGithub/
 
 labels/
 *.txt
